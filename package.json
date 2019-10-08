@@ -1,0 +1,28 @@
+{
+  "name": "js-restaurant-page",
+  "version": "1.0.0",
+  "description": "A simple JS webpage using firebase",
+  "main": "index.js",
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-config-airbnb": "^18.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FSolM/JS-restaurant-page.git"
+  },
+  "author": "FSolM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FSolM/JS-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/FSolM/JS-restaurant-page#readme"
+}
