@@ -166,6 +166,29 @@ html {
 
 .container.container-content { padding: 5rem 0; }
 
+.container.container-content .row-contact {
+  > .col-12 {
+    text-align: center;
+    &:nth-child(1) {
+      font-size: 4rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    &:nth-child(2) {
+      font-size: 2rem;
+      text-transform: lowercase;
+    }
+  }
+  .col-info-social {
+    .col-12 {
+      font-size: 2rem;
+      margin: 1.5rem;
+      text-transform: lowercase;
+    }
+  }
+  .container-contact-info { margin-top: 4rem; }
+}
+
 .container.container-content .row-home {
   .col-md-6:nth-child(1) {
     h3 {
