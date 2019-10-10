@@ -254,7 +254,7 @@ html {
   border-radius: 2.5rem;
   height: 40rem;
   position: absolute;
-  right: 16rem;
+  left: 12rem;
   width: 35rem;
 }
 
@@ -275,5 +275,70 @@ html {
   background-color: #4081E2;
   left: 16rem;
   top: -2rem;
+}
+
+.container.container-content .row.row-menu {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+}
+
+.container.container-content .row.row-menu > .col-12 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container.container-content .row.row-menu .category-title {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.container.container-content .row.row-menu .category-title img {
+  margin-left: 5rem;
+  width: 5rem;
+}
+
+.container.container-content .row.row-menu .container.container-item {
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.container.container-content .row.row-menu .container.container-item > .row {
+  padding: 0;
+}
+
+.container.container-content .row.row-menu .container.container-menu {
+  padding: 4rem 4rem 0 4rem;
+}
+
+.container.container-content .row.row-menu .container.container-menu > .row {
+  margin: 2.5rem 0;
+  padding: 0;
+}
+
+.container.container-content .row.row-menu .col-item-description {
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+
+.container.container-content .row.row-menu .col-item-price {
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.container.container-content .row.row-menu .col-item-price-description {
+  font-size: 1.6rem;
+  font-style: italic;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.container.container-content .row.row-menu .col-item-title {
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=style.css.map */

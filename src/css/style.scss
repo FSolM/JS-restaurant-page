@@ -183,7 +183,7 @@ html {
       border-radius: 2.5rem;
       height: 40rem;
       position: absolute;
-      right: 16rem;
+      left: 12rem;
       width: 35rem;
     }
     .deco-img {
@@ -192,15 +192,64 @@ html {
       background-size: cover;
       object-fit: cover;
       z-index: 2;
-      img {
-        
-        height: 100%;
-      }
+      img { height: 100%; }
     }
     .deco-plain {
       background-color: $accent-blue;
       left: 16rem;
       top: -2rem;
     }
+  }
+}
+
+.container.container-content .row.row-menu {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  > .col-12 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .category-title {
+    font-size: 3.6rem;
+    font-weight: 600;
+    img {
+      margin-left: 5rem;
+      width: 5rem;
+    }
+  }
+  .container.container-item {
+    margin: 1.5rem 0;
+    padding: 0;
+    > .row { padding: 0; }
+  }
+  .container.container-menu {
+    padding: 4rem 4rem 0 4rem ;
+    > .row {
+      margin: 2.5rem 0;
+      padding: 0;
+    }
+  }
+  .col-item-description {
+    font-size: 2rem;
+    text-transform: lowercase;
+  }
+  .col-item-price {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-align: right;
+  }
+  .col-item-price-description {
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: right;
+    text-transform: lowercase;
+  }
+  .col-item-title {
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 600;
+    text-transform: capitalize;
   }
 }
