@@ -1,3 +1,3 @@
 ./dist/main.js
 
-!.eslintrc.js
+.eslintrc.js
