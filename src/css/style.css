@@ -125,6 +125,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   font-size: 2rem;
+  font-weight: 400;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -229,5 +230,50 @@ html {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
+}
+
+.container.container-content {
+  padding: 5rem 0;
+}
+
+.container.container-content .row-home .col-md-6:nth-child(1) h3 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.container.container-content .row-home .col-md-6:nth-child(1) .container {
+  padding: 2.5rem;
+}
+
+.container.container-content .row-home .col-md-6:nth-child(1) .container .row .col-12 {
+  color: #707070;
+  font-size: 2.5rem;
+}
+
+.container.container-content .row-home .col-md-6:nth-child(2) .container [class^="deco-"] {
+  border-radius: 2.5rem;
+  height: 40rem;
+  position: absolute;
+  right: 16rem;
+  width: 35rem;
+}
+
+.container.container-content .row-home .col-md-6:nth-child(2) .container .deco-img {
+  background-image: url("../assets/img/fancy-food.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 2;
+}
+
+.container.container-content .row-home .col-md-6:nth-child(2) .container .deco-img img {
+  height: 100%;
+}
+
+.container.container-content .row-home .col-md-6:nth-child(2) .container .deco-plain {
+  background-color: #4081E2;
+  left: 16rem;
+  top: -2rem;
 }
 /*# sourceMappingURL=style.css.map */

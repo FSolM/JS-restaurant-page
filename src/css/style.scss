@@ -88,6 +88,7 @@ html {
       align-items: center;
       display: flex;
       font-size: 2rem;
+      font-weight: 400;
       justify-content: center;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -159,6 +160,47 @@ html {
     to {
       opacity: 1;
       transform: translateY(0%);
+    }
+  }
+}
+
+.container.container-content { padding: 5rem 0; }
+
+.container.container-content .row-home {
+  .col-md-6:nth-child(1) {
+    h3 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    .container { padding: 2.5rem; }
+    .container .row .col-12 {
+      color: $font-colour-light;
+      font-size: 2.5rem;
+    }
+  }
+  .col-md-6:nth-child(2) .container {
+    [class^="deco-"] {
+      border-radius: 2.5rem;
+      height: 40rem;
+      position: absolute;
+      right: 16rem;
+      width: 35rem;
+    }
+    .deco-img {
+      background-image: url('../assets/img/fancy-food.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+      z-index: 2;
+      img {
+        
+        height: 100%;
+      }
+    }
+    .deco-plain {
+      background-color: $accent-blue;
+      left: 16rem;
+      top: -2rem;
     }
   }
 }
