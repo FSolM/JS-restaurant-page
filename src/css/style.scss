@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i,700|Roboto:400,500&display=swap');
 
 // Variables
+
 // Colours
+$accent-blue: #4081E2;
+$accent-blue-dark: #274574;
 $font-colour: #3D3D3D;
 $font-colour-light: #707070;
-$accent-blue: #4081E2;
-
-$red: #FF4A53;
-$dark: #333;
+$tejuino: #f7e92e;
 
 // Tab Config
 $tab-count: 3;
@@ -52,6 +52,129 @@ body {
 html {
   width: 100%;
   height: 100%;
+}
+
+footer {
+  background-color: $font-colour;
+  color: #ffffff;
+  a {
+    color: inherit;
+    &:hover { color: $tejuino; }
+  }
+}
+
+.container.container-content { padding: 5rem 0; }
+
+.container.container-content .row-contact {
+  > .col-12 {
+    text-align: center;
+    &:nth-child(1) {
+      font-size: 4rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    &:nth-child(2) {
+      font-size: 2rem;
+      text-transform: lowercase;
+    }
+  }
+  .col-info-social {
+    .col-12 {
+      font-size: 2rem;
+      margin: 1.5rem;
+      text-transform: lowercase;
+    }
+  }
+  .container-contact-info { margin-top: 4rem; }
+}
+
+.container.container-content .row-home {
+  margin-bottom: 10rem;
+  .col-md-6:nth-child(1) {
+    h3 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    .container { padding: 2.5rem; }
+    .container .row .col-12 {
+      color: $font-colour-light;
+      font-size: 2.5rem;
+    }
+  }
+  .col-md-6:nth-child(2) .container {
+    [class^="deco-"] {
+      border-radius: 2.5rem;
+      height: 40rem;
+      position: absolute;
+      left: 12rem;
+      width: 35rem;
+    }
+    .deco-img {
+      background-image: url('../assets/img/fancy-food.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+      z-index: 2;
+      img { height: 100%; }
+    }
+    .deco-plain {
+      background-color: $accent-blue;
+      left: 16rem;
+      top: -2rem;
+    }
+  }
+}
+
+.container.container-content .row.row-menu {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  > .col-12 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .category-title {
+    font-size: 3.6rem;
+    font-weight: 600;
+    img {
+      margin-left: 5rem;
+      width: 5rem;
+    }
+  }
+  .container.container-item {
+    margin: 1.5rem 0;
+    padding: 0;
+    > .row { padding: 0; }
+  }
+  .container.container-menu {
+    padding: 4rem 4rem 0 4rem ;
+    > .row {
+      margin: 2.5rem 0;
+      padding: 0;
+    }
+  }
+  .col-item-description {
+    font-size: 2rem;
+    text-transform: lowercase;
+  }
+  .col-item-price {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-align: right;
+  }
+  .col-item-price-description {
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: right;
+    text-transform: lowercase;
+  }
+  .col-item-title {
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
 }
 
 .container-nav {
@@ -161,118 +284,5 @@ html {
       opacity: 1;
       transform: translateY(0%);
     }
-  }
-}
-
-.container.container-content { padding: 5rem 0; }
-
-.container.container-content .row-contact {
-  > .col-12 {
-    text-align: center;
-    &:nth-child(1) {
-      font-size: 4rem;
-      font-weight: 600;
-      text-transform: capitalize;
-    }
-    &:nth-child(2) {
-      font-size: 2rem;
-      text-transform: lowercase;
-    }
-  }
-  .col-info-social {
-    .col-12 {
-      font-size: 2rem;
-      margin: 1.5rem;
-      text-transform: lowercase;
-    }
-  }
-  .container-contact-info { margin-top: 4rem; }
-}
-
-.container.container-content .row-home {
-  .col-md-6:nth-child(1) {
-    h3 {
-      font-size: 4rem;
-      font-weight: 600;
-    }
-    .container { padding: 2.5rem; }
-    .container .row .col-12 {
-      color: $font-colour-light;
-      font-size: 2.5rem;
-    }
-  }
-  .col-md-6:nth-child(2) .container {
-    [class^="deco-"] {
-      border-radius: 2.5rem;
-      height: 40rem;
-      position: absolute;
-      left: 12rem;
-      width: 35rem;
-    }
-    .deco-img {
-      background-image: url('../assets/img/fancy-food.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      object-fit: cover;
-      z-index: 2;
-      img { height: 100%; }
-    }
-    .deco-plain {
-      background-color: $accent-blue;
-      left: 16rem;
-      top: -2rem;
-    }
-  }
-}
-
-.container.container-content .row.row-menu {
-  font-family: 'Montserrat', sans-serif;
-  padding: 0;
-  > .col-12 {
-    font-size: 4rem;
-    font-weight: 800;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .category-title {
-    font-size: 3.6rem;
-    font-weight: 600;
-    img {
-      margin-left: 5rem;
-      width: 5rem;
-    }
-  }
-  .container.container-item {
-    margin: 1.5rem 0;
-    padding: 0;
-    > .row { padding: 0; }
-  }
-  .container.container-menu {
-    padding: 4rem 4rem 0 4rem ;
-    > .row {
-      margin: 2.5rem 0;
-      padding: 0;
-    }
-  }
-  .col-item-description {
-    font-size: 2rem;
-    text-transform: lowercase;
-  }
-  .col-item-price {
-    font-size: 2.6rem;
-    font-weight: 600;
-    text-align: right;
-  }
-  .col-item-price-description {
-    font-size: 1.6rem;
-    font-style: italic;
-    text-align: right;
-    text-transform: lowercase;
-  }
-  .col-item-title {
-    font-size: 2.6rem;
-    font-style: italic;
-    font-weight: 600;
-    text-transform: capitalize;
   }
 }
