@@ -1,5 +1,5 @@
 const renderHome = (target) => {
-  // document.head.appendChild
+  document.title = 'Home';
   target.innerHTML = `
     <div class="row row-home">
       <div class="col-md-6">
