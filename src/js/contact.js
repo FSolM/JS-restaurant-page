@@ -1,8 +1,8 @@
 const renderContact = (target) => {
   document.title = 'Contact';
   target.innerHTML = `
-    <div class="col-12">Contact us!</div>
     <div class="row row-contact">
+      <div class="col-12">Contact us!</div>
       <div class="col-12">Please don't leave a bad review</div>
       <div class="container container-contact-info">
         <div class="row">
