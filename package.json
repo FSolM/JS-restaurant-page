@@ -1,7 +1,7 @@
 {
   "name": "js-restaurant-page",
   "version": "1.0.0",
-  "description": "A simple JS webpage using firebase",
+  "description": "A simple JS webpage using Webpack",
   "main": "index.js",
   "dependencies": {
     "babel-eslint": "^10.0.3",
