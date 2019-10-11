@@ -1,23 +1,45 @@
 const renderHome = (target) => {
   document.title = 'Home';
-  target.innerHTML = `
-    <div class="row row-home">
-      <div class="col-md-6">
-        <h3>myRestaurant</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">This is myRestaurant, it's a real restaurant that actually exist, I swear it's not a scam! It's real, please don't look more into it...</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="container">
-          <div class="deco-img"></div>
-          <div class="deco-plain"></div>
-        </div>
-      </div>
-    </div>
-  `;
+  let parent = target;
+  let child = document.createElement('div');
+  child.classList.add('row', 'row-home');
+  parent.appendChild(child);
+  parent = child;
+  child = document.createElement('div');
+  child.classList.add('col-md-6');
+  parent.appendChild(child);
+  const helper = parent;
+  parent = child;
+  child = document.createElement('h3');
+  child.appendChild(document.createTextNode('myRestaurant'));
+  parent.appendChild(child);
+  child = document.createElement('div');
+  child.classList.add('container');
+  parent.appendChild(child);
+  parent = child;
+  child = document.createElement('div');
+  child.classList.add('row');
+  parent.appendChild(child);
+  parent = child;
+  child = document.createElement('div');
+  child.classList.add('col-12');
+  child.appendChild(document.createTextNode("This is myRestaurant, it's a real restaurant that actually exist, I swear it's not a scam! It's real, please don't look more into it..."));
+  parent.appendChild(child);
+  parent = helper;
+  child = document.createElement('div');
+  child.classList.add('col-md-6');
+  parent.appendChild(child);
+  parent = child;
+  child = document.createElement('div');
+  child.classList.add('container');
+  parent.appendChild(child);
+  parent = child;
+  child = document.createElement('div');
+  child.classList.add('deco-img');
+  parent.appendChild(child);
+  child = document.createElement('div');
+  child.classList.add('deco-plain');
+  parent.appendChild(child);
 };
 
 export default renderHome;
