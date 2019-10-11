@@ -137,7 +137,8 @@ footer {
   .category-title {
     font-size: 3.6rem;
     font-weight: 600;
-    img {
+    svg {
+      height: 5rem;
       margin-left: 5rem;
       width: 5rem;
     }
@@ -176,14 +177,15 @@ footer {
     text-transform: capitalize;
   }
 }
-
 .container-nav {
   input[name="tab-control"] {
     display: none;
     @include tabs {
       > label {
-        cursor: default;
         color: $accent-blue;
+        cursor: default;
+        fill: $accent-blue;
+        svg { fill: $accent-blue; }
         @media (max-width: map-get($breakpoints, small)) { background: rgba(0, 0, 0, 0.08); }
       }
     }
@@ -225,9 +227,12 @@ footer {
         color: $font-colour-light;
         cursor: pointer;
         outline: 0;
+        svg { fill: $font-colour-light; }
       }
       br { display: none; }
-      img {
+      svg {
+        fill: $font-colour;
+        height: 4rem;
         margin-right: 1rem;
         width: 4rem;
       }
@@ -263,14 +268,14 @@ footer {
         color: $accent-blue;
         display: none;
         &::after {
-          content: "";
-          position: relative;
-          display: block;
-          width: 30px;
-          height: 3px;
           background: $accent-blue;
-          margin-top: 5px;
+          content: "";
+          display: block;
+          height: 3px;
           left: 1px;
+          margin-top: 5px;
+          position: relative;
+          width: 30px;
         }
       }
     }
