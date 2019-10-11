@@ -20,7 +20,7 @@ const renderContact = (target) => {
             </div>
           </div>
           <div class="col-lg-6 col-info-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3153.716697705701!2d-122.4031456!3d37.7732405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2b6ed49f55%3A0x19b6e8c7a9009254!2sMars%20Bar%20%26%20Restaurant!5e0!3m2!1sen!2smx!4v1570720303147!5m2!1sen!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3153.716697705701!2d-122.4031456!3d37.7732405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2b6ed49f55%3A0x19b6e8c7a9009254!2sMars%20Bar%20%26%20Restaurant!5e0!3m2!1sen!2smx!4v1570720303147!5m2!1sen!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="">
           </div>
         </div>
       </div>
