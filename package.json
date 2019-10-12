@@ -1,7 +1,7 @@
 {
   "name": "js-restaurant-page",
   "version": "1.0.0",
-  "description": "A simple JS webpage using firebase",
+  "description": "A simple JS webpage using Webpack",
   "main": "index.js",
   "dependencies": {
     "babel-eslint": "^10.0.3",
@@ -13,7 +13,9 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
