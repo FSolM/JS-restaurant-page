@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i,700|Roboto:400,500&display=swap');
+
+// Variables
+
+// Colours
+$accent-blue: #4081E2;
+$accent-blue-dark: #274574;
+$font-colour: #3D3D3D;
+$font-colour-light: #707070;
+$tejuino: #f7e92e;
+
+// Tab Config
+$tab-count: 3;
+$indicator-width: 5rem;
+$indicator-height: 0.4rem;
+
+// Selectors relative to radio inputs
+$label-selector: "~ ul > li";
+$slider-selector: "~ .slider";
+$content-selector: "~ .content > section";
+
+// Mixing
+@mixin tabs (
+  $label-selector: $label-selector,
+  $slider-selector: $slider-selector,
+  $content-selector: $content-selector) {
+  @for $i from 1 through $tab-count {
+    &:nth-of-type(#{$i}):checked {
+      #{$label-selector}:nth-child(#{$i}) {
+        @content;
+      }
+      #{$slider-selector} { transform: translateX(#{100% * ($i - 1)}); }
+      #{$content-selector}:nth-child(#{$i}) { display: block; }
+    }
+  }
+}
+
+// Breakpoints
+$breakpoints: (
+  medium: #{$tab-count*250px},
+  small: #{$tab-count*150px}
+);
+
+body {
+  color: $font-colour;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: $font-colour;
+  color: #ffffff;
+  a {
+    color: inherit;
+    &:hover { color: $tejuino; }
+  }
+}
+
+.container.container-content { padding: 5rem 0; }
+
+.container.container-content .row-contact {
+  > .col-12 {
+    text-align: center;
+    &:nth-child(1) {
+      font-size: 4rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    &:nth-child(2) {
+      font-size: 2rem;
+      text-transform: lowercase;
+    }
+  }
+  .col-info-social {
+    .col-12 {
+      font-size: 2rem;
+      margin: 1.5rem;
+      text-transform: lowercase;
+    }
+  }
+  .container-contact-info { margin-top: 4rem; }
+}
+
+.container.container-content .row-home {
+  margin-bottom: 10rem;
+  .col-md-6:nth-child(1) {
+    h3 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    .container { padding: 2.5rem; }
+    .container .row .col-12 {
+      color: $font-colour-light;
+      font-size: 2.5rem;
+    }
+  }
+  .col-md-6:nth-child(2) .container {
+    [class^="deco-"] {
+      border-radius: 2.5rem;
+      height: 40rem;
+      position: absolute;
+      left: 12rem;
+      width: 35rem;
+    }
+    .deco-img {
+      background-image: url('../assets/img/fancy-food.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+      z-index: 2;
+      img { height: 100%; }
+    }
+    .deco-plain {
+      background-color: $accent-blue;
+      left: 16rem;
+      top: -2rem;
+    }
+  }
+}
+
+.container.container-content .row.row-menu {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  > .col-12 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .category-title {
+    font-size: 3.6rem;
+    font-weight: 600;
+    svg {
+      height: 5rem;
+      margin-left: 5rem;
+      width: 5rem;
+    }
+  }
+  .container.container-item {
+    margin: 1.5rem 0;
+    padding: 0;
+    > .row { padding: 0; }
+  }
+  .container.container-menu {
+    padding: 4rem 4rem 0 4rem ;
+    > .row {
+      margin: 2.5rem 0;
+      padding: 0;
+    }
+  }
+  .col-item-description {
+    font-size: 2rem;
+    text-transform: lowercase;
+  }
+  .col-item-price {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-align: right;
+  }
+  .col-item-price-description {
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: right;
+    text-transform: lowercase;
+  }
+  .col-item-title {
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+.container-nav {
+  input[name="tab-control"] {
+    display: none;
+    @include tabs {
+      > label {
+        color: $accent-blue;
+        cursor: default;
+        fill: $accent-blue;
+        svg { fill: $accent-blue; }
+        @media (max-width: map-get($breakpoints, small)) { background: rgba(0, 0, 0, 0.08); }
+      }
+    }
+  }
+  > .row { justify-content: center; }
+  ul {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    padding-left: 0;
+    li {
+      align-items: center;
+      box-sizing: border-box;
+      display: center;
+      flex: 1;
+      padding: 0 1rem;
+      text-align: center;
+      width: #{100% / $tab-count};
+    }
+    li label {
+      align-items: center;
+      display: flex;
+      font-size: 2rem;
+      font-weight: 400;
+      justify-content: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      white-space: nowrap;
+        -webkit-touch-callout: none;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $font-colour-light;
+        cursor: pointer;
+        outline: 0;
+        svg { fill: $font-colour-light; }
+      }
+      br { display: none; }
+      svg {
+        fill: $font-colour;
+        height: 4rem;
+        margin-right: 1rem;
+        width: 4rem;
+      }
+    }
+  }
+  .slider {
+    position: relative;
+    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+    width: #{100% / $tab-count};
+    .indicator {
+      background: $accent-blue;
+      border-radius: 0.1rem;
+      height: $indicator-height;
+      margin: 0 auto;
+      max-width: 100%;
+      position: relative;
+      width: $indicator-width;
+    }
+  }
+  .content {
+    margin-top: 30px;
+    section {
+      display: none;
+      animation: {
+        name: content;
+        direction: normal;
+        duration: 0.3s;
+        timing-function: ease-in-out;
+        iteration-count: 1;
+      }
+      line-height: 1.4;
+      h2 {
+        color: $accent-blue;
+        display: none;
+        &::after {
+          background: $accent-blue;
+          content: "";
+          display: block;
+          height: 3px;
+          left: 1px;
+          margin-top: 5px;
+          position: relative;
+          width: 30px;
+        }
+      }
+    }
+  }
+  @keyframes content {
+    from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+}
